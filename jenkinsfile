@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        SSH_CRED = 'node-app-key'
-        SERVER_IP = '54.67.84.65'
+        SSH_CRED = 'Jenkins_Node_Server'
+        SERVER_IP = '107.22.33.203'
         REMOTE_USER = 'ubuntu'
         APP_DIR = '/home/ubuntu/pythonapp'
     }
@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git url: 'https://github.com/iamtruptimane/pythonapp.git', branch: 'master'
+                git url: 'https://github.com/Jirage/pythonapp_CICD.git', branch: 'master'
             }
         }
 
